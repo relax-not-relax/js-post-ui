@@ -31,7 +31,7 @@ axiosClient.interceptors.response.use(function (response) {
     // Do something with response data
     return response;
 }, function (error) {
-  console.log('axiosClient - reponse error: ', error.response);
+  console.log('axiosClient - response error: ', error.response);
   if(!error.response) throw new Error('Network error. Please try again');
 
   //Redirect to login if not login
