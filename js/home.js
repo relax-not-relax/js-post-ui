@@ -55,7 +55,7 @@ async function handleFilterChange(filterName, filterValue) {
         //render post list based URL params
         //const queryParams = new URLSearchParams(window.location.search);
         //set default query params is not existed
-        const { data } = await postApi.getAll(queryParams);
+        const { data, pagination } = await postApi.getAll(queryParams);
         renderPostList('postList', data);
         renderPagination('pagination', data);
 
