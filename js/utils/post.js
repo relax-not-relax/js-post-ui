@@ -48,6 +48,13 @@ export function createPostElement(post) {
 
 
     //attach event
+    //go to post detail when click on div.post-item
+    const divElement = liElement.firstElementChild;
+    if (!divElement) return;
+
+    divElement.addEventListener('click', () => {
+        window.location.assign(`post-detail.html?id=${post.id}`);
+    });
 
     return liElement;
 
